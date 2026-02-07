@@ -11,9 +11,10 @@ from PIL import Image,ImageDraw,ImageFont
 import re
 
 cmd = "ip -br addr show eth0 | awk '{print $3}' | cut -d/ -f1" # only ETH
-IPhole = subprocess.check_output(cmd, shell = True ) # Register ouput from cmd in>
-IPhole = IPhole.decode('utf-8') if isinstance(IPhole, bytes) else IPhole
-IPhole = IPhole.strip()
+#IPhole = subprocess.check_output(cmd, shell = True ) # Register ouput from cmd in>
+#IPhole = IPhole.decode('utf-8') if isinstance(IPhole, bytes) else IPhole
+#IPhole = IPhole.strip()
+IPhole = subprocess.check_output(cmd, shell=True, text=True).strip()
 
 #IPhole = "192.168.178.80"
 #IPhole = "localhost"
