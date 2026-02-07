@@ -4,11 +4,8 @@
 
 * Device: Raspberry Pi Zero 2 W
 * OS: Raspberry Pi OS (other) -> Raspberry Pi OS Lite (64-bit)
-* Storage: 128gb SD-Card
+* Storage: >32gb SD-Card
 * Hostname: pi2hole
-* Localisation: Capital city: Berlin (Germany)
-  Time zone: Europe/Berlin
-  Kayboard layout: de
 * User: alex
 * Remote access: Enable SSH - Use public key authentication
 
@@ -74,8 +71,7 @@ router -> pi3hole (ETH) -> 192.168.178.86
 ### http://192.168.178.86/admin/
 `Settings -> Teleporter -> Import previously exported configuration`
 
-`[ ] Configuration`
-
+`[ ] Configuration`  
 `[ ] DHCP leases`
 
 `[X] Groups`
