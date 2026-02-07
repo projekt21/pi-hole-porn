@@ -29,21 +29,19 @@ Write
 * router -> pi3hole (ETH) -> 192.168.178.86
 * `ssh 192.168.178.86`
 
-sudo apt update
-sudo apt upgrade -y
-sudo reboot
+* `sudo apt update`
+* `sudo apt upgrade -y`
+* `sudo reboot`
 
-ssh 192.168.178.86
+* `ssh 192.168.178.86`
 
-curl -sSL https://install.pi-hole.net | bash
+* `curl -sSL https://install.pi-hole.net | bash`
 
-sudo pihole setpassword
+* `sudo pihole setpassword`
 
-----------------------------------------------------------
-
-mkdir git
-cd git
-git clone https://github.com/projekt21/pi-hole-porn.git
+* `mkdir git`
+* `cd git`
+* `git clone https://github.com/projekt21/pi-hole-porn.git`
 
 # ssh banner
 sudo mv pi-hole-porn/10-uname /etc/update-motd.d/
