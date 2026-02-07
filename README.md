@@ -10,6 +10,7 @@
 * Raspberry Pi Zero USB HUB HAT (B)
 * ETH patch cable
 * Power Adapter microUSB Charger for Raspberry Pi Zero 2W
+* >32GB SD-card
 
 ## Raspberry Pi Imager
 
