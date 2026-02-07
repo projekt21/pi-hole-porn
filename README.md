@@ -2,6 +2,15 @@
 
 # PI-HOLE PORN
 
+## Components
+
+* Raspberry Pi Zero 2W
+* Aluminum Alloy Heatsink for Raspberry Pi Zero 2W
+* 0.91 inch OLED 128x32 I2C IIC SSD1306 blue OLED display module for
+* Raspberry Pi Zero USB HUB HAT (B)
+* ETH patch cable
+* Power Adapter microUSB Charger for Raspberry Pi Zero 2W
+
 ## Raspberry Pi Imager
 
 * Device: Raspberry Pi Zero 2 W
