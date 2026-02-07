@@ -1,0 +1,71 @@
+#!/bin/sh
+# Title.........:  PiHole-motd
+# Description...:  custom motd - Welcome Banner for the PiHole
+# Author........:  MxMarl
+#                  alex pleiner
+# Version.......:  1.0.1 (pi hole 6.x)
+# Installation..:  see README
+
+
+#style:
+BGreen='\033[1;32m'
+BYellow='\033[1;33m'
+BIBlue='\033[1;94m'
+BIBlack='\033[1;90m' 
+Yellow='\033[0;33m' 
+NC='\e[0m'
+bor='======================================================='
+
+#printf "\033c"
+upSeconds="$(/usr/bin/cut -d. -f1 /proc/uptime)"
+secs=$((${upSeconds}%60))
+mins=$((${upSeconds}/60%60))
+hours=$((${upSeconds}/3600%24))
+days=$((${upSeconds}/86400))
+UPTIME=`printf "%d days, %02dh %02dm %02ds" "$days" "$hours" "$mins" "$secs"`
+
+echo "$(tput setaf 2)
+$BIBlack $bor $NC
+                     $BGreen Don't Panic!$NC
+            $BIBlue`uname -srmo`$(tput setaf 1)$NC
+$BIBlack $bor $NC
+$BYellow Versions:$NC
+$Yellow Pihole.....:$NC  `pihole -v | grep Core | awk {'print $4, $5, $6'}`
+$Yellow Web........:$NC  `pihole -v | grep Web | awk {'print $4, $5, $6'}`
+$Yellow FTL........:$NC  `pihole -v | grep FTL | awk {'print $4, $5, $6'}`
+$BIBlack $bor $NC
+$BYellow Machine:$NC
+$Yellow Time.......:$NC  `date +"%A, %e %B %Y, %T"` 
+$Yellow Uptime.....:$NC  ${UPTIME}     
+$Yellow Temperatur.:$NC  `vcgencmd measure_temp | sed "s/temp=\(.*\)/\1/"` 
+$Yellow Processes..:$NC  `ps ax | wc -l | tr -d " "` 
+$Yellow Memory.....:$NC  `free -m | awk 'NR==2 {printf "Used: %sMB of %sMB",$3,$2; }'` 
+$Yellow Disk.......:$NC  `df -h | grep "/dev/mmc" | awk 'NR==1 {printf "Total: %sB, Used: %sB, Free: %sB",$2,$3,$4;}'`
+$Yellow IP......eth:$NC  `ip -4 addr show eth0 | grep -oP '(?<=inet\s)\d+(\.\d+){3}'`
+$Yellow .......wlan:$NC  `ip -4 addr show wlan0 | grep -oP '(?<=inet\s)\d+(\.\d+){3}'`
+$BIBlack $bor $NC
+$BYellow Last Login:$NC
+$Yellow IP/Date....:$NC  `last -i $USER | grep -v 'still logged' | head -1 | awk {'print $3'}`   \
+`last -i $USER | grep -v 'still logged' | head -1 | awk {'print $4, $5, $6, $7'}`
+$BIBlack $bor $NC
+$BYellow Commands:$NC
+ pihole help          (Show commands)
+ pihole updatePihole  (Update PiHole)
+ pihole updateGravity (Update Blocklist)
+ pihole repair        (Repair PiHole)
+ pihole tail          (Live output of PiHole)
+ pihole setpassword   (Change Admin-Page passwd)
+$BIBlack $bor $NC 
+`echo "\e[0m"` 
+$(tput sgr0)"
+
+
+
+
+
+
+
+
+
+
+
