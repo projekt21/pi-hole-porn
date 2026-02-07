@@ -45,7 +45,9 @@ router -> pi3hole (ETH) -> 192.168.178.86
 
 ### raspi-config
 * `sudo raspi-config`
+  
 `Interface Options -> SPI -> yes`
+
 `Interface Options -> I2C -> yes`
 
 * `cd ..`
@@ -71,11 +73,17 @@ router -> pi3hole (ETH) -> 192.168.178.86
 
 ### http://192.168.178.86/admin/
 `Settings -> Teleporter -> Import previously exported configuration`
+
 `[ ] Configuration`
+
 `[ ] DHCP leases`
+
 `[X] Groups`
+
 `[X] Lists`
+
 `[X] Domains/Regexes`
+
 `[ ] Clients`
 
 Import
