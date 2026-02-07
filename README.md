@@ -1,18 +1,37 @@
-PI-HOLE PORN
------------------------------------------------------------
+# Überschrift 1 (H1)
+## Überschrift 2 (H2)
 
-Raspberry Pi Imager
-------------------------------------------------------------
-Device: Raspberry Pi Zero 2 W
-OS: Raspberry Pi OS (other) -> Raspberry Pi OS Lite (64-bit)
-Storage: 128gb SD-Card
-Hostname: pi3hole
-Localisation: Capital city: Berlin (Germany)
-              Time zone: Europe/Berlin
-              Kayboard layout: de
-User: alex
-Wi-Fi: nirvana.net
-Remote access: Enable SSH - Use public key authentication
+Dies ist ein normaler Text mit **fettem Text**, *kursiven Wörtern* und einer ~~Streichung~~.
+
+### Listen
+*   Punkt A
+*   Punkt B
+    *   Unterpunkt
+
+1.  Erster Schritt
+2.  Zweiter Schritt
+
+### Links und Bilder
+[Besuche Google](https://www.google.com)
+![Bildbeschreibung](https://via.placeholder.com)
+
+### Code
+`inline-code` wird so dargestellt.
+
+
+# PI-HOLE PORN
+
+## Raspberry Pi Imager
+
+* Device: Raspberry Pi Zero 2 W
+* OS: Raspberry Pi OS (other) -> Raspberry Pi OS Lite (64-bit)
+* Storage: 128gb SD-Card
+* Hostname: pi2hole
+* Localisation: Capital city: Berlin (Germany)
+  Time zone: Europe/Berlin
+  Kayboard layout: de
+* User: alex
+* Remote access: Enable SSH - Use public key authentication
 
 Write
 
