@@ -1,3 +1,5 @@
+![Screenshot](./screenshot.png)
+
 # PI-HOLE PORN
 
 ## Raspberry Pi Imager
@@ -74,10 +76,10 @@ router -> pi2hole (ETH) -> 192.168.178.86
 
 Import
 
-## list Block
+## List Block
 
 ### Tracking/Ads
-* `https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+*   https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
 * 	https://v.firebog.net/hosts/Easyprivacy.txt
 * 	https://v.firebog.net/hosts/Easylist.txt
 * 	https://adaway.org/hosts.txt
