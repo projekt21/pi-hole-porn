@@ -10,7 +10,12 @@ from PIL import Image,ImageDraw,ImageFont
 
 import re
 
-IPhole = "192.168.178.80"
+cmd = "ip -br addr show eth0 | awk '{print $3}' | cut -d/ -f1" # only ETH
+IPhole = subprocess.check_output(cmd, shell = True ) # Register ouput from cmd in>
+IPhole = IPhole.decode('utf-8') if isinstance(IPhole, bytes) else IPhole
+IPhole = IPhole.strip()
+
+#IPhole = "192.168.178.80"
 #IPhole = "localhost"
 payload = {"password": "uis1pwsb"}   #### FIXME
 
@@ -20,7 +25,7 @@ icon_font= ImageFont.truetype('lineawesome-webfont.ttf', 16)
 font18 = ImageFont.truetype("PixelOperator.ttf", 16)
 
 serial = i2c(port=1, address=0x3C)
-device = ssd1306(serial, width=128, height=32, rotate=2)
+device = ssd1306(serial, width=128, height=32, rotate=0)
 
 img_path = "pihole-menu-oled.png"
 logo = Image.open(img_path).convert("1")  # Zu 1-Bit (Monochrom) konvertieren
