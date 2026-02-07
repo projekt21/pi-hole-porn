@@ -1,15 +1,4 @@
-# Überschrift 1 (H1)
-## Überschrift 2 (H2)
 
-Dies ist ein normaler Text mit **fettem Text**, *kursiven Wörtern* und einer ~~Streichung~~.
-
-### Listen
-*   Punkt A
-*   Punkt B
-    *   Unterpunkt
-
-1.  Erster Schritt
-2.  Zweiter Schritt
 
 ### Links und Bilder
 [Besuche Google](https://www.google.com)
@@ -35,10 +24,10 @@ Dies ist ein normaler Text mit **fettem Text**, *kursiven Wörtern* und einer ~~
 
 Write
 
-------------------------------------------------------------
+## Installation
 
-router -> pi3hole (ETH)
-ssh 192.168.178.86
+* router -> pi3hole (ETH) -> 192.168.178.86
+* `ssh 192.168.178.86`
 
 sudo apt update
 sudo apt upgrade -y
