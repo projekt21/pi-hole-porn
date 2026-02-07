@@ -13,7 +13,7 @@ Write
 
 ## Installation
 
-router -> pi3hole (ETH) -> 192.168.178.86
+router -> pi2hole (ETH) -> 192.168.178.86
 
 * `ssh 192.168.178.86`
 
@@ -39,15 +39,13 @@ router -> pi3hole (ETH) -> 192.168.178.86
 * `sudo rm /etc/motd`
 * `sudo sed -i 's/\#PrintLastLog yes/PrintLastLog no/g' /etc/ssh/sshd_config`
 * `sudo systemctl restart sshd`
+* `cd ..`
 
 ### raspi-config
 * `sudo raspi-config`
   
-`Interface Options -> SPI -> yes`
-
+`Interface Options -> SPI -> yes`\
 `Interface Options -> I2C -> yes`
-
-* `cd ..`
 
 ### luma-Status
 * `python3 -m venv ~/luma-env`
@@ -55,31 +53,23 @@ router -> pi3hole (ETH) -> 192.168.178.86
 * `~/luma-env/bin/python -m pip install --upgrade luma.oled`
 * `~/luma-env/bin/python -m pip install --upgrade requests`
 
-
 * `sudo apt-get install python3 python3-pip python3-pil libjpeg-dev zlib1g-dev libfreetype-dev liblcms2-dev libopenjp2-7 libtiff-dev -y`
 
 * `sudo usermod -a -G spi,gpio,i2c alex`
 
-
-* `cd ~/git/pi-hole-porn`
-
 ### luma Service
-* `sudo cp luma.service /etc/systemd/system/luma.service`
+* `sudo cp ~/git/pi-hole-porn/luma.service /etc/systemd/system/luma.service`
 * `sudo systemctl enable luma.service`
 * `sudo systemctl start luma.service`
 
 ### http://192.168.178.86/admin/
 `Settings -> Teleporter -> Import previously exported configuration`
 
-`[ ] Configuration`  
-`[ ] DHCP leases`
-
-`[X] Groups`
-
-`[X] Lists`
-
-`[X] Domains/Regexes`
-
+`[ ] Configuration`\
+`[ ] DHCP leases`\
+`[X] Groups`\
+`[X] Lists`\
+`[X] Domains/Regexes`\
 `[ ] Clients`
 
 Import
