@@ -47,7 +47,12 @@ btn_dark.when_pressed = dark
 
 cmd = "ip -br addr show eth0 | awk '{print $3}' | cut -d/ -f1" # only ETH
 IPhole = subprocess.check_output(cmd, shell=True, text=True).strip()
-# IPhole = "192.168.178.80"
+if not IPhole:
+    IPhole = "192.168.178.80"
+
+print(f"IP: {IPhole}")
+
+#IPhole = "192.168.178.80"
 #IPhole = "localhost"
 payload = {"password": "uis1pwsb"}   #### FIXME
 
@@ -117,7 +122,19 @@ def display_update ():
           draw.text((OFFSET_X + size+6, OFFSET_Y + 1*size-yaxis), str(cache) + " Cache", font=font18, fill="white")
           draw.text((OFFSET_X + size+6, OFFSET_Y + 2*size-yaxis), str(gravity_size) + " Domains", font=font18, fill="white")
           draw.text((OFFSET_X + size+6, OFFSET_Y + 3*size-yaxis), str(recent_blocked), font=font18, fill="white")
-     
+
+pihole_menu = Image.open("pihole-menu.png").convert("RGBA").resize((240, 60))
+backgroud = Image.new("RGBA", device.size, "white")
+backgroud.paste(pihole_menu, (OFFSET_X, OFFSET_Y+48), pihole_menu)
+draw = ImageDraw.Draw(backgroud)
+draw.rectangle((OFFSET_X, OFFSET_Y, OFFSET_X + DEVICE_WIDTH - 1, OFFSET_Y + size), outline="red", fill="red")
+draw.text((OFFSET_X + 1, OFFSET_Y + int(0*size)), chr(61931), font=icon_font, fill="white")  # ip
+draw.text((OFFSET_X + size+6, OFFSET_Y + 0*size-yaxis), IPhole, font=font18, fill="white") 
+          
+device.display(backgroud.convert(device.mode))
+#print("Anzeige aktualisiert!")
+sleep(3)
+
 
 url = f"http://{IPhole}/api/auth"
 response = requests.post(url, json=payload)
