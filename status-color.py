@@ -91,37 +91,40 @@ def display_update ():
         width, height = draw.im.size
         
         #draw.rectangle(device.bounding_box, outline="hotpink", fill="hotpink")
-        draw.rectangle((OFFSET_X, OFFSET_Y, OFFSET_X + DEVICE_WIDTH - 1, OFFSET_Y + DEVICE_HEIGHT - 1), outline="hotpink", fill="hotpink")
+        #draw.rectangle((OFFSET_X, OFFSET_Y, OFFSET_X + DEVICE_WIDTH - 1, OFFSET_Y + DEVICE_HEIGHT - 1), outline="hotpink", fill="hotpink")
+        draw.rectangle((OFFSET_X, OFFSET_Y, OFFSET_X + DEVICE_WIDTH - 1, OFFSET_Y + DEVICE_HEIGHT - 1), outline="white", fill="white")
+        
         draw.rectangle((OFFSET_X, OFFSET_Y, OFFSET_X + DEVICE_WIDTH - 1, OFFSET_Y + size), outline="red", fill="red")
         
         if not status["second"]:
           draw.text((OFFSET_X + 1, OFFSET_Y + int(0*size)), chr(61931), font=icon_font, fill="white")  # ip
-          draw.text((OFFSET_X + 1, OFFSET_Y + 1*size), chr(62171), font=icon_font, fill="white") # cpu
-          draw.text((OFFSET_X + DEVICE_WIDTH - 1 - size, OFFSET_Y + 1*size), chr(62153), font=icon_font, fill="white") # temp
-          draw.text((OFFSET_X + 1, OFFSET_Y + 2*size), chr(62776), font=icon_font, fill="white") # memory
-          draw.text((OFFSET_X + DEVICE_WIDTH - 1 -size, OFFSET_Y + 2*size), chr(0xF007), font=icon_font, fill="white") # clients
-          draw.text((OFFSET_X + 1, OFFSET_Y + 3*size), chr(63426), font=icon_font, fill="white") # disk
-          draw.text((OFFSET_X + DEVICE_WIDTH - 1 -size, OFFSET_Y + 3*size), chr(62034), font=icon_font, fill="white") # uptime
+          draw.text((OFFSET_X + 1, OFFSET_Y + 1*size), chr(62171), font=icon_font, fill="blue") # cpu
+          draw.text((OFFSET_X + DEVICE_WIDTH - 1 - size, OFFSET_Y + 1*size), chr(62153), font=icon_font, fill="red") # temp
+          draw.text((OFFSET_X + 1, OFFSET_Y + 2*size), chr(62776), font=icon_font, fill="darkviolet") # memory
+          draw.text((OFFSET_X + DEVICE_WIDTH - 1 -size, OFFSET_Y + 2*size), chr(0xF007), font=icon_font, fill="orange") # clients
+          draw.text((OFFSET_X + 1, OFFSET_Y + 3*size), chr(63426), font=icon_font, fill="grey") # disk
+          draw.text((OFFSET_X + DEVICE_WIDTH - 1 -size, OFFSET_Y + 3*size), chr(62034), font=icon_font, fill="green") # uptime
 
           draw.text((OFFSET_X + size+6, OFFSET_Y + 0*size-yaxis), str(IP,'utf-8'), font=font18, fill="white") 
-          draw.text((OFFSET_X + size+6, OFFSET_Y + 1*size-yaxis), str(CPU,'utf-8') + "%", font=font18, fill="white")
-          draw.text((OFFSET_X + DEVICE_WIDTH - 1 -size-3, OFFSET_Y + 1*size-yaxis), str(temp,'utf-8') + "°C", font=font18, fill="white", anchor="ra")
-          draw.text((OFFSET_X + size+6, OFFSET_Y + 2*size-yaxis), str(Memuseper,'utf-8') + "%", font=font18, fill="white")
-          draw.text((OFFSET_X + DEVICE_WIDTH - 1 -size-3, OFFSET_Y + 2*size-yaxis), str(active_clients), font=font18, fill="white", anchor="ra")
-          draw.text((OFFSET_X + size+6, OFFSET_Y + 3*size-yaxis), str(Disk,'utf-8'), font=font18, fill="white")
-          draw.text((OFFSET_X + DEVICE_WIDTH - 1 -size-3, OFFSET_Y + 3*size-yaxis), str(uptime,'utf-8'), font=font18, fill="white", anchor="ra")
+          draw.text((OFFSET_X + size+6, OFFSET_Y + 1*size-yaxis), str(CPU,'utf-8') + "%", font=font18, fill="grey")
+          draw.text((OFFSET_X + DEVICE_WIDTH - 1 -size-3, OFFSET_Y + 1*size-yaxis), str(temp,'utf-8') + "°C", font=font18, fill="grey", anchor="ra")
+          draw.text((OFFSET_X + size+6, OFFSET_Y + 2*size-yaxis), str(Memuseper,'utf-8') + "%", font=font18, fill="grey")
+          draw.text((OFFSET_X + DEVICE_WIDTH - 1 -size-3, OFFSET_Y + 2*size-yaxis), str(active_clients), font=font18, fill="grey", anchor="ra")
+          draw.text((OFFSET_X + size+6, OFFSET_Y + 3*size-yaxis), str(Disk,'utf-8'), font=font18, fill="grey")
+          draw.text((OFFSET_X + DEVICE_WIDTH - 1 -size-3, OFFSET_Y + 3*size-yaxis), str(uptime,'utf-8'), font=font18, fill="grey", anchor="ra")
 
         else:  
-          draw.text((OFFSET_X + 1, OFFSET_Y + int(0*size)), chr(0xF714), font=icon_font, fill="white") # pihole
-          draw.text((OFFSET_X + DEVICE_WIDTH - 1 -size, OFFSET_Y + int(0*size)), chr(0xF2ED), font=icon_font, fill="white") # pihole block
-          draw.text((OFFSET_X + 1, OFFSET_Y + 1*size), chr(0xF6E2), font=icon_font, fill="white") # cache
-          draw.text((OFFSET_X + 1, OFFSET_Y + 2*size), chr(0xF47D), font=icon_font, fill="white") # blocklist
-          draw.text((OFFSET_X + 1, OFFSET_Y + 3*size), chr(0xF2F2), font=icon_font, fill="white") # recent blocked
+          draw.text((OFFSET_X + 1, OFFSET_Y + int(0*size)), chr(0xF714), font=icon_font, fill="yellow") # pihole
+          draw.text((OFFSET_X + DEVICE_WIDTH - 1 -size, OFFSET_Y + int(0*size)), chr(0xF2ED), font=icon_font, fill="lightgreen") # pihole block
+          draw.text((OFFSET_X + 1, OFFSET_Y + 1*size), chr(0xF6E2), font=icon_font, fill="grey") # cache
+          draw.text((OFFSET_X + 1, OFFSET_Y + 2*size), chr(0xF47D), font=icon_font, fill="violet") # blocklist
+          draw.text((OFFSET_X + 1, OFFSET_Y + 3*size), chr(0xF2F2), font=icon_font, fill="red") # recent blocked
+          
           draw.text((OFFSET_X + size+6, OFFSET_Y + int(0*size)-yaxis), percent_text, font=font18, fill="white")
           draw.text((OFFSET_X + DEVICE_WIDTH - 1 -size-3, OFFSET_Y + int(0*size)-yaxis), str(blocked), font=font18, fill="white", anchor="ra")
-          draw.text((OFFSET_X + size+6, OFFSET_Y + 1*size-yaxis), str(cache) + " Cache", font=font18, fill="white")
-          draw.text((OFFSET_X + size+6, OFFSET_Y + 2*size-yaxis), str(gravity_size) + " Domains", font=font18, fill="white")
-          draw.text((OFFSET_X + size+6, OFFSET_Y + 3*size-yaxis), str(recent_blocked), font=font18, fill="white")
+          draw.text((OFFSET_X + size+6, OFFSET_Y + 1*size-yaxis), str(cache) + " Cache", font=font18, fill="grey")
+          draw.text((OFFSET_X + size+6, OFFSET_Y + 2*size-yaxis), str(gravity_size) + " Domains", font=font18, fill="grey")
+          draw.text((OFFSET_X + size+6, OFFSET_Y + 3*size-yaxis), str(recent_blocked), font=font18, fill="grey")
 
 pihole_menu = Image.open("pihole-menu.png").convert("RGBA").resize((240, 60))
 backgroud = Image.new("RGBA", device.size, "white")
