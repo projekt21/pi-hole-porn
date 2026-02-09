@@ -83,8 +83,6 @@ router -> pi2hole (ETH) -> 192.168.178.86
 * `sudo systemctl enable luma.service`
 * `sudo systemctl start luma.service`
 
-### Color
-
 ### http://192.168.178.86/admin/
 `Settings -> Teleporter -> Import previously exported configuration`
 
