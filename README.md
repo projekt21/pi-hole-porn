@@ -8,7 +8,7 @@
 * Raspberry Pi Zero 2W
 * Aluminum Alloy Heatsink for Raspberry Pi Zero 2W
 * 0.91 inch OLED 128x32 I2C IIC SSD1306 blue OLED display module\
-  1.14inch DIYmall Mini PiTFT SPI 135x240 LCD TFT display module
+  OR 1.14inch DIYmall Mini PiTFT SPI 135x240 LCD TFT display module
 * Raspberry Pi Zero USB HUB HAT (B)
 * ETH patch cable
 * Power Adapter microUSB Charger for Raspberry Pi Zero 2W
@@ -71,10 +71,25 @@ router -> pi2hole (ETH) -> 192.168.178.86
 
 * `sudo usermod -a -G spi,gpio,i2c alex`
 
-### luma Service
+### Color
+
+* `sudo cp luma-color.service /etc/systemd/system/luma.service`
+
+* `sudo apt install swig`
+* `sudo apt install liblgpio-dev`
+* `~/luma-env/bin/python -m pip install --upgrade luma.lcd`
+* `~/luma-env/bin/python -m pip install --upgrade gpiozero`
+* `~/luma-env/bin/python -m pip install --upgrade lgpio rpi-lgpio`
+* `~/luma-env/bin/python -m pip install --upgrade spidev`
+
+### B/W
 * `sudo cp ~/git/pi-hole-porn/luma.service /etc/systemd/system/luma.service`
+ 
+### luma Service
 * `sudo systemctl enable luma.service`
 * `sudo systemctl start luma.service`
+
+### Color
 
 ### http://192.168.178.86/admin/
 `Settings -> Teleporter -> Import previously exported configuration`
