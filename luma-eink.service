@@ -1,0 +1,14 @@
+[Unit]
+Description=LUMA Status
+After=network.target
+
+[Service]
+ExecStart=/home/alex/luma-env/bin/python status-eink.py
+WorkingDirectory=/home/alex/git/pi-hole-porn
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=alex
+
+[Install]
+WantedBy=multi-user.target
