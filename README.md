@@ -71,13 +71,14 @@ router -> pi2hole (ETH) -> 192.168.178.86
 
 * `sudo usermod -a -G spi,gpio,i2c alex`
 
-### Color
+### Display
+#### Color
 
 * `sudo cp ~/git/pi-hole-porn/luma-color.service /etc/systemd/system/luma.service`
 * `sudo apt install swig liblgpio-dev -y`
 * `~/luma-env/bin/python -m pip install --upgrade luma.lcd gpiozero lgpio rpi-lgpio spidev`
 
-### E-Ink
+#### E-Ink
 * `sudo cp ~/git/pi-hole-porn/luma-eink.service /etc/systemd/system/luma.service`
 
 * `cd ~/git`
@@ -85,7 +86,7 @@ router -> pi2hole (ETH) -> 192.168.178.86
 * `cd e-Paper/RaspberryPi_JetsonNano/python/`
 * `cp -r lib/waveshare_epd /home/alex/git/pi-hole-porn/`
 
-### B/W
+#### B/W
 * `sudo cp ~/git/pi-hole-porn/luma.service /etc/systemd/system/luma.service`
  
 ### luma Service
