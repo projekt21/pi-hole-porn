@@ -1,7 +1,7 @@
 # PI-HOLE PORN
 
 ![Screenshot](./screenshot2.png)
-
+![Screenshot](./screenshot3.png)
 ![Screenshot](./screenshot1.png)
 
 ## Components
@@ -9,7 +9,8 @@
 * Raspberry Pi Zero 2W
 * Aluminum Alloy Heatsink for Raspberry Pi Zero 2W
 * 0.91 inch OLED 128x32 I2C IIC SSD1306 blue OLED display module\
-  OR 1.14inch DIYmall Mini PiTFT SPI 135x240 LCD TFT display module
+  OR 1.14inch DIYmall Mini PiTFT SPI 135x240 LCD TFT display module\
+  OR 2.13inch E-Ink Display HAT 250x122 SPI display module
 * Raspberry Pi Zero USB HUB HAT (B)
 * ETH patch cable
 * Power Adapter microUSB Charger for Raspberry Pi Zero 2W
@@ -76,6 +77,11 @@ router -> pi2hole (ETH) -> 192.168.178.86
 * `sudo apt install swig liblgpio-dev -y`
 * `~/luma-env/bin/python -m pip install --upgrade luma.lcd gpiozero lgpio rpi-lgpio spidev`
 
+### E-Ink
+* `sudo cp ~/git/pi-hole-porn/luma-eink.service /etc/systemd/system/luma.service`
+
+* FIXME
+ 
 ### B/W
 * `sudo cp ~/git/pi-hole-porn/luma.service /etc/systemd/system/luma.service`
  
