@@ -78,15 +78,14 @@ router -> pi2hole (ETH) -> 192.168.178.86
 * `sudo apt install swig liblgpio-dev -y`
 * `~/luma-env/bin/python -m pip install --upgrade luma.lcd gpiozero lgpio rpi-lgpio spidev`
 
-#### E-Ink
+#### or E-Ink
 * `sudo cp ~/git/pi-hole-porn/luma-eink.service /etc/systemd/system/luma.service`
-
 * `cd ~/git`
 * `git clone https://github.com/waveshareteam/e-Paper.git`
 * `cd e-Paper/RaspberryPi_JetsonNano/python/`
 * `cp -r lib/waveshare_epd /home/alex/git/pi-hole-porn/`
 
-#### B/W
+#### or B/W
 * `sudo cp ~/git/pi-hole-porn/luma.service /etc/systemd/system/luma.service`
  
 ### luma Service
