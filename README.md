@@ -80,8 +80,11 @@ router -> pi2hole (ETH) -> 192.168.178.86
 ### E-Ink
 * `sudo cp ~/git/pi-hole-porn/luma-eink.service /etc/systemd/system/luma.service`
 
-* FIXME
- 
+* `cd ~/git`
+* `git clone https://github.com/waveshareteam/e-Paper.git`
+* `cd e-Paper/RaspberryPi_JetsonNano/python/`
+* `cp -r lib/waveshare_epd /home/alex/git/pi-hole-porn/`
+
 ### B/W
 * `sudo cp ~/git/pi-hole-porn/luma.service /etc/systemd/system/luma.service`
  
