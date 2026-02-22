@@ -108,31 +108,31 @@ Import
 
 ### Tracking/Ads
 *   https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+*   https://raw.githubusercontent.com/StevenBlack/hosts/master/extensions/fakenews/hosts
 * 	https://v.firebog.net/hosts/Easyprivacy.txt
 * 	https://v.firebog.net/hosts/Easylist.txt
-* 	https://adaway.org/hosts.txt
-* 	https://gitlab.com/hagezi/mirror/-/raw/main/dns-blocklists/adblock/pro.txt
-* 	https://raw.githubusercontent.com/StevenBlack/hosts/master/extensions/fakenews/hosts
-* 	https://adguardteam.github.io/HostlistsRegistry/assets/filter_9.txt
 * 	https://v.firebog.net/hosts/static/w3kbl.txt
-* 	https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.Spam/hosts
-* 	https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/KADhosts.txt
-* 	https://v.firebog.net/hosts/AdguardDNS.txt
-* 	https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/KADhosts.txt
 * 	https://v.firebog.net/hosts/AdguardDNS.txt
 * 	https://v.firebog.net/hosts/Admiral.txt
-* 	https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt
+* 	https://adaway.org/hosts.txt
+* 	https://gitlab.com/hagezi/mirror/-/raw/main/dns-blocklists/adblock/pro.txt
+*  	https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.Spam/hosts
+* 	https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/KADhosts.txt
+*  	https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/KADhosts.txt
+*  	https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt
 * 	https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareHosts.txt
 * 	https://phishing.army/download/phishing_army_blocklist_extended.txt
+* 	https://adguardteam.github.io/HostlistsRegistry/assets/filter_9.txt
 
 ### Porn
 *  https://raw.githubusercontent.com/chadmayfield/pihole-blocklists/master/lists/pi_blocklist_porn_all.list
-* https://raw.githubusercontent.com/columndeeply/hosts/main/hosts00
-* https://raw.githubusercontent.com/columndeeply/hosts/main/hosts01
-* https://raw.githubusercontent.com/columndeeply/hosts/main/hosts02
-* https://raw.githubusercontent.com/columndeeply/hosts/main/hosts03
-* https://raw.githubusercontent.com/columndeeply/hosts/main/hosts04
-* https://raw.githubusercontent.com/columndeeply/hosts/main/hosts05
+* https://raw.githubusercontent.com/columndeeply/hosts/main/hosts00 (optional)
+* https://raw.githubusercontent.com/columndeeply/hosts/main/hosts01 (optional)
+* https://raw.githubusercontent.com/columndeeply/hosts/main/hosts02 (optional)
+* https://raw.githubusercontent.com/columndeeply/hosts/main/hosts03 (optional)
+* https://raw.githubusercontent.com/columndeeply/hosts/main/hosts04 (optional)
+* https://raw.githubusercontent.com/columndeeply/hosts/main/hosts05 (optional)
+* https://dbl.ipfire.org/lists/porn/domains.txt
 * 	https://alex.zeitform.de/pihole/pihole-porno.txt
 
 ### Social (optional)
