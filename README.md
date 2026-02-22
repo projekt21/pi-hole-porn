@@ -66,8 +66,8 @@ router -> pi2hole (ETH) -> 192.168.178.86
 ### luma-Status
 * `python3 -m venv ~/luma-env`
 
-* `~/luma-env/bin/python -m pip install --upgrade luma.oled requests`
-* `sudo apt-get install python3 python3-pip python3-pil libjpeg-dev zlib1g-dev libfreetype-dev liblcms2-dev libopenjp2-7 libtiff-dev -y`
+* `~/luma-env/bin/python -m pip install --upgrade luma.oled luma.lcd gpiozero lgpio rpi-lgpio spidev requests`
+* `sudo apt-get install python3 python3-pip python3-pil libjpeg-dev zlib1g-dev libfreetype-dev liblcms2-dev libopenjp2-7 libtiff-dev swig liblgpio-dev -y`
 
 * `sudo usermod -a -G spi,gpio,i2c alex`
 
@@ -75,8 +75,6 @@ router -> pi2hole (ETH) -> 192.168.178.86
 #### Color
 
 * `sudo cp ~/git/pi-hole-porn/luma-color.service /etc/systemd/system/luma.service`
-* `sudo apt install swig liblgpio-dev -y`
-* `~/luma-env/bin/python -m pip install --upgrade luma.lcd gpiozero lgpio rpi-lgpio spidev`
 
 #### or E-Ink
 * `sudo cp ~/git/pi-hole-porn/luma-eink.service /etc/systemd/system/luma.service`
