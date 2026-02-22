@@ -90,6 +90,19 @@ router -> pi2hole (ETH) -> 192.168.178.86
 * `sudo systemctl enable luma.service`
 * `sudo systemctl start luma.service`
 
+### Unattended Upgrades
+* `sudo apt install unattended-upgrades`
+
+* `sudo dpkg-reconfigure --priority=low unattended-upgrades`
+Yes
+
+* `sudo sed -i 's/\/\/Unattended-Upgrade::Automatic-Reboot "false";/Unattended-Upgrade::Automatic-Reboot "true";/g' /etc/apt/apt.conf.d/50unattended-upgrades`
+
+#### Test (optional)
+ 
+* `sudo unattended-upgrade --dry-run --debug`
+* `less /var/log/unattended-upgrades/unattended-upgrades.log`
+
 ### http://192.168.178.86/admin/
 `Settings -> Teleporter -> Import previously exported configuration`
 
