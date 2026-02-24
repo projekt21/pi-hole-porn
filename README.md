@@ -91,7 +91,7 @@ router -> pi2hole (ETH) -> 192.168.178.86
 * `sudo systemctl start luma.service`
 
 ### Unattended Upgrades
-* `sudo apt install unattended-upgrades`
+* `sudo apt install unattended-upgrades -y`
 
 * `sudo dpkg-reconfigure --priority=low unattended-upgrades`
 Yes
