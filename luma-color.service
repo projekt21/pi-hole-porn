@@ -1,12 +1,11 @@
 [Unit]
 Description=LUMA Status
-After=network.target
+Wants=network-online.target
+After=network-online.target
 
 [Service]
-ExecStart=/home/alex/luma-env/bin/python status-color.py
+ExecStart=/home/alex/luma-env/bin/python -u status-color.py
 WorkingDirectory=/home/alex/git/pi-hole-porn
-StandardOutput=inherit
-StandardError=inherit
 Restart=always
 User=alex
 
