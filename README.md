@@ -85,7 +85,7 @@ router -> pi2hole (ETH) -> 192.168.178.86
 
 #### or B/W
 * `sudo cp ~/git/pi-hole-porn/luma.service /etc/systemd/system/luma.service`
- 
+
 ### luma Service
 * `sudo systemctl enable luma.service`
 * `sudo systemctl start luma.service`
@@ -114,6 +114,13 @@ Yes
 `[ ] Clients`
 
 Import
+
+### App password
+
+`Settings -> Web Interface - API -> Advanced Settings -> Configure app password` Write Password
+
+`sudo sed -i 's/xxxxxx/vDOozPWudhoW5FipLJpFiOax8Qwqo5FHwXXd3v58FUc=/g' ~/git/pi-hole-porn/*.py'
+
 
 ## List Block
 
