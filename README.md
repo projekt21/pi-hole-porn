@@ -117,9 +117,11 @@ Import
 
 ### App password
 
-`Settings -> Web Interface - API -> Advanced Settings -> Configure app password` Write Password
+`Settings -> Web Interface - API -> Advanced Settings -> Configure app password` 
 
-`sudo sed -i 's/xxxxxx/vDOozPWudhoW5FipLJpFiOax8Qwqo5FHwXXd3v58FUc=/g' ~/git/pi-hole-porn/*.py'
+Write Password
+
+`sudo sed -i 's/xxxxxx/vDOozPWudhoW5FipLJpFiOax8Qwqo5FHwXXd3v58FUc=/g' ~/git/pi-hole-porn/*.py`
 
 
 ## List Block
