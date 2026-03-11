@@ -54,7 +54,7 @@ print(f"IP: {IPhole}")
 
 #IPhole = "192.168.178.80"
 #IPhole = "localhost"
-payload = {"password": "uis1pwsb"}   #### FIXME
+payload = {"password": "xxxxxx"}   #### FIXME
 
 pattern = r"\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}" # IPv4 regex
 
